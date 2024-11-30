@@ -1,6 +1,7 @@
-from flask import Flask, render_template, send_from_directory, request
+from flask import Flask, render_template, send_from_directory, request, make_response
 import random
 from database import get_count, get_skill
+import json
 
 app = Flask(__name__)
 
@@ -12,14 +13,19 @@ def home():
 
 @app.route('/skill')
 def skill():
-    completed = list(request.cookies.get('completed',[]))
+    completed = json.loads(request.cookies.get('completed','[]'))
     random_id = random.randrange(1,LESSON_COUNT+1,1)
     while (random_id in completed):
         random_id = random.randrange(1,LESSON_COUNT+1,1)
     lesson = get_skill(random_id)
     completed.append(random_id)
-    response = render_template('lesson.html', lesson=lesson)
-    response.set_cookie('completed',f'{completed}')
+    response = make_response(render_template(
+        'skill.html',  # Указываем шаблон
+        skill_title=lesson['skillName'],  # Название навыка
+        skill_description=lesson['skillDesc'],  # Описание навыка
+        skill_video_id=lesson['skillUrl']  # ID видео на YouTube
+    ))
+    response.set_cookie('completed',json.dumps(completed))
     return response
 
 

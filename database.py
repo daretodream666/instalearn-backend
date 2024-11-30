@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy import String
 from sqlalchemy import select
-from sqlalchemy import func
+from sqlalchemy import text
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
@@ -30,7 +30,8 @@ def get_skill(id): # Это просто для получения объект�
 
 def get_count():
     with Session(engine) as session:
-        row_count = session.query(Skills).count()
+        result = session.execute(text('SELECT COUNT(*) FROM skills'))
+        row_count = result.scalar()
         return row_count
 
 # def get_skill_name(id): # Ну тут получаем имя скилла

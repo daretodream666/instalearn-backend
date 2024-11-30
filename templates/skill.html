@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ skill_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">INSTALEARN</div>
+        <button class="theme-toggle" id="theme-toggle">🌙</button>
+    </header>
+
+    <main>
+        <section id="skill" class="skill fade-in-on-scroll">
+            <h2 id="skill-title">{{ skill_title }}</h2>
+            <p id="skill-description">{{ skill_description }}</p>
+            <div class="video-container">
+                <iframe id="skill-video" src="https://www.youtube.com/embed/{{ skill_video_id }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='scripts/theme2.js') }}"></script>
+</body>
+</html>
