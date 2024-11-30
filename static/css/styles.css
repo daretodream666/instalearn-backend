@@ -366,3 +366,23 @@ body {
     object-fit: contain;
     animation: shake 2s ease-in-out infinite;
 }
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: %;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-video {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 50px;
+}
