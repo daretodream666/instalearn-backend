@@ -424,7 +424,7 @@ body.loaded #video-overlay {
     transition: color 0.3s ease;
     position: absolute;
     right: 20px;
-    top: calc(100% + 10px);
+    top: 35px;
     z-index: 1001;
 }
 
@@ -453,7 +453,7 @@ body.loaded #video-overlay {
         justify-content: center;
         align-items: center;
         z-index: 9999;
-        border-radius: 10px; 
+        border-radius: 10px;
     }
 
     .navbar .theme-toggle {
