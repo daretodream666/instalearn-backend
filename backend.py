@@ -15,6 +15,13 @@ def home():
 def skill():
     completed = json.loads(request.cookies.get('completed','[]'))
     random_id = random.randrange(1,LESSON_COUNT+1,1)
+    if len(completed) == LESSON_COUNT:
+        return render_template(
+            'skill.html',
+            skill_title='ВЫ ПРОШЛИ ИГРУ',
+            skill_description='теперь вы умеете всё на свете, поздравляем!',
+            skill_video_id='dQw4w9WgXcQ'
+            )
     while (random_id in completed):
         random_id = random.randrange(1,LESSON_COUNT+1,1)
     lesson = get_skill(random_id)
