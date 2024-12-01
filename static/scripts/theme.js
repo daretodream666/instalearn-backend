@@ -28,7 +28,7 @@ if (typeof(Storage) !== "undefined") {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    window.location.href = 'https://www.youtube.com/watch?v=nviEkurZlao';
 });
 
 window.addEventListener('load', function() {
