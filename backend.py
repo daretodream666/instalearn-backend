@@ -20,7 +20,7 @@ def skill():
             'skill.html',
             skill_title='ВЫ ПРОШЛИ ИГРУ',
             skill_description='теперь вы умеете всё на свете, поздравляем!',
-            skill_video_id='dQw4w9WgXcQ'
+            skill_video_id='hB7CDrVnNCs'
             )
     while (random_id in completed):
         random_id = random.randrange(1,LESSON_COUNT+1,1)
