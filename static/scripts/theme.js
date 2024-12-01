@@ -28,5 +28,14 @@ if (typeof(Storage) !== "undefined") {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    window.location.href = 'https://www.youtube.com/watch?v=nviEkurZlao';
+});
+
+window.addEventListener('load', function() {
+    const videoOverlay = document.getElementById('video-overlay');
+    const introVideo = document.getElementById('intro-video');
+
+    introVideo.onended = function() {
+        document.body.classList.add('loaded');
+    };
 });

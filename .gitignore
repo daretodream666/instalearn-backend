@@ -1,2 +1,4 @@
 /skills.db
 /__pycache__
+/.venv
+/.idea
