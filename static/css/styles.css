@@ -19,7 +19,7 @@
     --hero-gradient-start: #e5d7c3;
     --hero-gradient-end: #d0c7b3;
 }
-}
+
 
 .logo {
     font-size: 2rem;
@@ -352,7 +352,7 @@ body {
 
 :root.light-theme .cta-button {
     background-color: #a3744f;
-    color: #ffffff; =
+    color: #ffffff;
 }
 
 .cta-button:hover {
@@ -400,7 +400,7 @@ body.loaded #video-overlay {
     top: 0;
     left: 0;
     width: 100%;
-    height: %;
+    height: 100%;
     background-color: white;
     z-index: 9999;
     display: flex;
